@@ -1,8 +1,5 @@
 var React = require('react');
-// import ReactAudioPlayer from 'react-audio-player';
-// var Sound = require('react-sound');
 
-var srcRain = "./audio/rain.mp3";
 var Home = React.createClass( {
     Rain() {
             var myAudio = document.getElementById("rain");
@@ -53,7 +50,7 @@ var Home = React.createClass( {
             }
     },
     render () {
-        
+        var Background = "./img/beautiful-rainy-weather-wallpapers-2.jpg";
         return(
             
             <div Class = "Home">
@@ -88,7 +85,7 @@ var Home = React.createClass( {
         </div>
          
         <div className="section text-right">
-            {/*<div className="background-image" style="background-image : url(require('./img/beautiful-rainy-weather-wallpapers-2.jpg')"></div>*/}
+          <div className="background-image" style={{backgroundImage: 'url(' + require('./img/beautiful-rainy-weather-wallpapers-2.jpg') + ')'}}></div>
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
