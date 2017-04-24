@@ -19,6 +19,8 @@
     "jest-cli": "^19.0.2",
     "jquery": "^3.2.1",
     "node-sass": "^4.5.2",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.5.4",
     "regenerator-runtime": "^0.10.3",

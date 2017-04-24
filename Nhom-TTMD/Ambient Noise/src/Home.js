@@ -74,7 +74,7 @@ var Home = React.createClass( {
                             <a href="#">Timer</a>
                         </li>
                         <li>
-                            <a href="#">Group</a>
+                            <a href="group">Group</a>
                         </li>
                         <li>
                             <a href="#">More</a>

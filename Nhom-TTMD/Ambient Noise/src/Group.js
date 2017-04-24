@@ -76,7 +76,7 @@ var Group = React.createClass({
         <div className="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul className="nav navbar-nav navbar-right">
             <li>
-              <a href="#">Home</a>
+              <a href="home">Home</a>
             </li>
             <li>
               <a href="#">Timer</a>
