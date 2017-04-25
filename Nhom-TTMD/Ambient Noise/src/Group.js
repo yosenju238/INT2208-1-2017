@@ -1,4 +1,6 @@
 var React = require('react');
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import DialogAudio from './DialogAudio';
 
 var Group = React.createClass({
     Storm() {
@@ -152,9 +154,10 @@ var Group = React.createClass({
                 </div>
                 <div className="row">
                   <div className="col-md-12">
-                    <a className="btn btn-block btn-lg btn-primary" data-toggle="button">Create your own</a>
+                    <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick = {DialogAudio}>Create your own</a>
                   </div>
                 </div>
+                {/*<DialogAudio />*/}
               </div>
             </div>
           </div>

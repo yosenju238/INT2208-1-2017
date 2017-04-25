@@ -6,17 +6,16 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-
+import App from './App';
 
 ReactDOM.render(
-  // <Home />,
-  // <Group />,
-            <Router>
-              <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/home" component={Home} />
-                <Route path="/group" component={Group} />
-                </div>
-            </Router>,
+  <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route path="/home" component={Home} />
+        <Route path="/group" component={Group} />
+      </div>
+  </Router>,
+  //  <App />,
   document.getElementById('root')
 );
