@@ -70,13 +70,13 @@ var Home = React.createClass( {
                         <li className="active">
                             <a href="#">Home</a>
                         </li>
-                        <li>
+                        <li className="disabled">
                             <a href="#">Timer</a>
                         </li>
                         <li>
                             <a href="group">Group</a>
                         </li>
-                        <li>
+                        <li className="disabled">
                             <a href="#">More</a>
                         </li>
                     </ul>
@@ -166,19 +166,19 @@ var Home = React.createClass( {
                             <br/>
                         </p>
                         <div className="row">
-                            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            <div className="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                                <a href="#"><i className="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i className="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i className="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i className="fa fa-3x fa-fw fa-github text-inverse"></i></a>
                             </div>
                         </div>
                         <div className="row">
-                            <div class="col-md-12 hidden-xs text-right">
-                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            <div className="col-md-12 hidden-xs text-right">
+                                <a href="#"><i className="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i className="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i className="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i className="fa fa-3x fa-fw fa-github text-inverse"></i></a>
                             </div>
                         </div>
                     </div>

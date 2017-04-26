@@ -80,13 +80,13 @@ var Group = React.createClass({
             <li>
               <a href="home">Home</a>
             </li>
-            <li>
-              <a href="#">Timer</a>
+            <li className="disabled">
+              <a href="#" >Timer</a>
             </li>
             <li className="active">
               <a href="#">Group</a>
             </li>
-            <li>
+            <li className="disabled">
               <a href="#">More</a>
             </li>
           </ul>
@@ -154,7 +154,7 @@ var Group = React.createClass({
                 </div>
                 <div className="row">
                   <div className="col-md-12">
-                    <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick = {DialogAudio}>Create your own</a>
+                    <a className="btn btn-block btn-lg btn-primary disabled" data-toggle="button" onClick = {DialogAudio}>Create your own</a>
                   </div>
                 </div>
                 {/*<DialogAudio />*/}
