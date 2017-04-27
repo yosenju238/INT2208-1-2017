@@ -16,7 +16,7 @@ Tài liệu tham khảo:
 Use case:
 ![image](https://cloud.githubusercontent.com/assets/25663795/25464038/73e397c4-2b24-11e7-8ea2-846ac643f225.png)
 
-Frameworks được sử dụng: ReactJS
+Frameworks được sử dụng: Bootstrap, ReactJS
 
 Kịch bản kiểm thử được viết bằng Jest - 1 component của reactJS
 
