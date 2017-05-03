@@ -132,15 +132,15 @@ var Timer = React.createClass({
 					<div className="col-md-3">
                         <h1 className="text-warning">TIMER</h1>
                         <div className="btn-group-vertical">
-										<Button time="5" startTimer={this.startTimer}/>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>10 minutes</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>15 minutes</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>30 minutes</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>45 minutes</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>1 hour</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>2 hour</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>4 hour</button>
-										<button type="button" className="btn btn-primary" onClick={this.startTimer}>Custom Time</button>
+										<Button time="60" startTimer={this.startTimer}/>
+										<Button time="300" startTimer={this.startTimer}/>
+										<Button time="600" startTimer={this.startTimer}/>
+										<Button time="900" startTimer={this.startTimer}/>
+										<Button time="1800" startTimer={this.startTimer}/>
+										<Button time="2700" startTimer={this.startTimer}/>
+										<Button time="3500" startTimer={this.startTimer}/>
+										
+										<button type="button" className="btn btn-primary disabled">Custom Time</button>
 						</div>
                     </div>
 				</div>
