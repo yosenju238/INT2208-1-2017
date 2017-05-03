@@ -8,7 +8,6 @@ import {
   Route
 } from 'react-router-dom'
 import DialogAudio from './DialogAudio';
-import Test from './Test';
 
 
 ReactDOM.render(

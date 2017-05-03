@@ -104,7 +104,7 @@ var Timer = React.createClass({
                         <li>
                             <a href="group">Group</a>
                         </li>
-                        <li>
+                        <li className="disabled">
                             <a href="#">More</a>
                         </li>
                     </ul>
@@ -138,7 +138,7 @@ var Timer = React.createClass({
 										<Button time="900" startTimer={this.startTimer}/>
 										<Button time="1800" startTimer={this.startTimer}/>
 										<Button time="2700" startTimer={this.startTimer}/>
-										<Button time="3500" startTimer={this.startTimer}/>
+										<Button time="3600" startTimer={this.startTimer}/>
 										
 										<button type="button" className="btn btn-primary disabled">Custom Time</button>
 						</div>
