@@ -1,6 +1,4 @@
 var React = require('react');
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import DialogAudio from './DialogAudio';
 
 var Group = React.createClass({
     Storm() {
@@ -61,6 +59,32 @@ var Group = React.createClass({
                 myAudio2.pause();
             }
     },
+    stopNoise() {
+        var myAudio1 = document.getElementById("rain");
+        var myAudio2 = document.getElementById("cafe");
+        var myAudio3 = document.getElementById("wind");
+        var myAudio4 = document.getElementById("bird");
+        var myAudio5 = document.getElementById("ocean");
+        var myAudio6 = document.getElementById("frog");
+        if (myAudio1.play) {
+            myAudio1.pause();
+        }
+        if (myAudio2.play) {
+            myAudio2.pause();
+        }
+        if (myAudio3.play) {
+            myAudio3.pause();
+        }
+        if (myAudio4.play) {
+            myAudio4.pause();
+        }
+        if (myAudio5.play) {
+            myAudio5.pause();
+        }
+        if (myAudio6.play) {
+            myAudio6.pause();
+        }
+    },
     render() {
         return(
         <div className = "Group">
@@ -80,8 +104,8 @@ var Group = React.createClass({
             <li>
               <a href="home">Home</a>
             </li>
-            <li className="disabled">
-              <a href="#" >Timer</a>
+            <li>
+              <a href="timer" >Timer</a>
             </li>
             <li className="active">
               <a href="#">Group</a>
@@ -131,33 +155,37 @@ var Group = React.createClass({
                     <source src={require("./audio/ocean.mp3")} />
                </audio>               
 
-                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Storm}>Storm</a>
+                <a className="btn btn-block btn-lg btn-primary" onClick={this.Storm}>Storm</a>
               </div>
             </div>
             <div className="row">
               <div className="col-md-12">
-                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.CafeInRainy}>Cafe in rainy</a>
+                <a className="btn btn-block btn-lg btn-primary" onClick={this.CafeInRainy}>Cafe in rainy</a>
               </div>
             </div>
             <div className="row">
               <div className="col-md-12">
-                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Night}>Night</a>
+                <a className="btn btn-block btn-lg btn-primary" onClick={this.Night}>Night</a>
               </div>
             </div>
             <div className="row">
               <div className="col-md-12">
-                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Nature}>Nature</a>
+                <a className="btn btn-block btn-lg btn-primary" onClick={this.Nature}>Nature</a>
                 <div className="row">
                   <div className="col-md-12">
-                    <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Sea}>Sea</a>
+                    <a className="btn btn-block btn-lg btn-primary" onClick={this.Sea}>Sea</a>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-12">
-                    <a className="btn btn-block btn-lg btn-primary disabled" data-toggle="button" onClick = {DialogAudio}>Create your own</a>
+                    <a className="btn btn-block btn-lg btn-primary disabled">Create your own</a>
                   </div>
                 </div>
-                {/*<DialogAudio />*/}
+                <div className="row">
+                   <div className="col-md-12">
+                     <a className="btn btn-block btn-default btn-lg" onClick={this.stopNoise}>Clear Noise</a>
+                   </div>
+               </div>
               </div>
             </div>
           </div>
