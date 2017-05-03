@@ -11,8 +11,10 @@
   "devDependencies": {
     "@types/jest": "^19.2.2",
     "babel-jest": "^19.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "bootstrap-toggle": "^2.2.2",
     "css-loader": "^0.28.0",
     "file-loader": "^0.11.1",
     "jest": "^19.0.2",
@@ -23,6 +25,7 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scripts": "0.9.5",
+    "react-tap-event-plugin": "^2.0.1",
     "react-test-renderer": "^15.5.4",
     "regenerator-runtime": "^0.10.3",
     "sass-loader": "^6.0.3",
@@ -48,5 +51,13 @@
       "js",
       "json"
     ]
-  }
+  },
+  "plugins": [
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ]
+  ]
 }

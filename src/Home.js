@@ -49,6 +49,32 @@ var Home = React.createClass( {
                 myAudio.pause();
             }
     },
+    stopNoise() {
+        var myAudio1 = document.getElementById("rain");
+        var myAudio2 = document.getElementById("cafe");
+        var myAudio3 = document.getElementById("wind");
+        var myAudio4 = document.getElementById("bird");
+        var myAudio5 = document.getElementById("ocean");
+        var myAudio6 = document.getElementById("frog");
+        if (myAudio1.play) {
+            myAudio1.pause();
+        }
+        if (myAudio2.play) {
+            myAudio2.pause();
+        }
+        if (myAudio3.play) {
+            myAudio3.pause();
+        }
+        if (myAudio4.play) {
+            myAudio4.pause();
+        }
+        if (myAudio5.play) {
+            myAudio5.pause();
+        }
+        if (myAudio6.play) {
+            myAudio6.pause();
+        }
+    },
     render () {
         var Background = "./img/beautiful-rainy-weather-wallpapers-2.jpg";
         return(
@@ -70,8 +96,8 @@ var Home = React.createClass( {
                         <li className="active">
                             <a href="#">Home</a>
                         </li>
-                        <li className="disabled">
-                            <a href="#">Timer</a>
+                        <li>
+                            <a href="timer">Timer</a>
                         </li>
                         <li>
                             <a href="group">Group</a>
@@ -107,7 +133,7 @@ var Home = React.createClass( {
                             <audio id="rain"  loop = "loop">
                                 <source src={require("./audio/rain.mp3")} />
                             </audio>
-                                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Rain} >Rain</a>
+                                <a className="btn btn-block btn-lg btn-primary" onClick={this.Rain} >Rain</a>
                             </div>
                         </div>
                         <div className="row">
@@ -115,7 +141,7 @@ var Home = React.createClass( {
                             <audio id="cafe"  loop = "loop">
                                 <source src={require("./audio/cafe.mp3")} />
                             </audio>
-                                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Cafe}>Cafe</a>
+                                <a className="btn btn-block btn-lg btn-primary" onClick={this.Cafe}>Cafe</a>
                             </div>
                         </div>
                         <div className="row">
@@ -123,7 +149,7 @@ var Home = React.createClass( {
                             <audio id="bird"  loop = "loop">
                                 <source src={require("./audio/bird.mp3")} />
                             </audio>
-                                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Bird}>Bird</a>
+                                <a className="btn btn-block btn-lg btn-primary" onClick={this.Bird}>Bird</a>
                             </div>
                         </div>
                         <div className="row">
@@ -131,13 +157,13 @@ var Home = React.createClass( {
                             <audio id="wind"  loop = "loop">
                                 <source src={require("./audio/wind.mp3")} />
                             </audio>
-                                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Wind}>Wind</a>
+                                <a className="btn btn-block btn-lg btn-primary" onClick={this.Wind}>Wind</a>
                         <div className="row">
                             <div className="col-md-12">
                             <audio id="frog"  loop = "loop">
                                 <source src={require("./audio/frog.mp3")} />
                             </audio>
-                                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Frog}>Frog</a>
+                                <a className="btn btn-block btn-lg btn-primary" onClick={this.Frog}>Frog</a>
                             </div>
                         </div>
                         <div className="row">
@@ -145,7 +171,12 @@ var Home = React.createClass( {
                             <audio id="ocean"  loop = "loop">
                                 <source src={require("./audio/ocean.mp3")} />
                             </audio>
-                                <a className="btn btn-block btn-lg btn-primary" data-toggle="button" onClick={this.Ocean}>Ocean</a>
+                                <a className="btn btn-block btn-lg btn-primary" onClick={this.Ocean}>Ocean</a>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <a className="btn btn-block btn-default btn-lg" onClick={this.stopNoise}>Clear Noise</a>
                             </div>
                         </div>
                         </div>
