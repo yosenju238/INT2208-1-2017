@@ -7,18 +7,17 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import DialogAudio from './DialogAudio';
-import Test from './Test';
+// import DialogAudio from './DialogAudio';
 
 
 ReactDOM.render(
   <Router>
-      <div>
+    <div>
         <Route exact path="/" component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/timer" component={Timer} />
         <Route path="/group" component={Group} />
-      </div>
+    </div>
   </Router>,
   // <Timer />,
   // <DialogAudio />,

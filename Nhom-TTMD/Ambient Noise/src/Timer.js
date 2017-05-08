@@ -2,32 +2,6 @@ var React = require('react');
 import DialogAudio from './DialogAudio';
 
 var TimeCountDown = React.createClass({
-          stopNoise() {
-        var myAudio1 = document.getElementById("rain");
-        var myAudio2 = document.getElementById("cafe");
-        var myAudio3 = document.getElementById("wind");
-        var myAudio4 = document.getElementById("bird");
-        var myAudio5 = document.getElementById("ocean");
-        var myAudio6 = document.getElementById("frog");
-        if (myAudio1.play) {
-            myAudio1.pause();
-        }
-        if (myAudio2.play) {
-            myAudio2.pause();
-        }
-        if (myAudio3.play) {
-            myAudio3.pause();
-        }
-        if (myAudio4.play) {
-            myAudio4.pause();
-        }
-        if (myAudio5.play) {
-            myAudio5.pause();
-        }
-        if (myAudio6.play) {
-            myAudio6.pause();
-        }
-    },
    render: function() {
      if (this.props.time == 0) {
        return this.stopNoise
@@ -61,27 +35,6 @@ var Timer = React.createClass({
 
         return(
             <div>
-                              <audio id="rain"  loop = "loop">
-                    <source src={require("./audio/rain.mp3")} />
-               </audio>
-               <audio id="cafe"  loop = "loop">
-                    <source src={require("./audio/cafe.mp3")} />
-               </audio>
-               <audio id="bird"  loop = "loop">
-                    <source src={require("./audio/bird.mp3")} />
-               </audio>               
-               <audio id="wind"  loop = "loop">
-                    <source src={require("./audio/wind.mp3")} />
-               </audio>
-               <audio id="wind"  loop = "loop">
-                    <source src={require("./audio/wind.mp3")} />
-               </audio>
-               <audio id="frog"  loop = "loop">
-                    <source src={require("./audio/frog.mp3")} />
-               </audio>
-               <audio id="ocean"  loop = "loop">
-                    <source src={require("./audio/ocean.mp3")} />
-               </audio>  
         <div className="navbar navbar-default navbar-static-top">
             <div className="container">
                 <div className="navbar-header">
@@ -98,13 +51,13 @@ var Timer = React.createClass({
                         <li >
                             <a href="home">Home</a>
                         </li>
-                        <li class="active">
+                        <li className="active">
                             <a href="#">Timer</a>
                         </li>
                         <li>
                             <a href="group">Group</a>
                         </li>
-                        <li>
+                        <li className="disabled">
                             <a href="#">More</a>
                         </li>
                     </ul>
@@ -138,7 +91,7 @@ var Timer = React.createClass({
 										<Button time="900" startTimer={this.startTimer}/>
 										<Button time="1800" startTimer={this.startTimer}/>
 										<Button time="2700" startTimer={this.startTimer}/>
-										<Button time="3500" startTimer={this.startTimer}/>
+										<Button time="3600" startTimer={this.startTimer}/>
 										
 										<button type="button" className="btn btn-primary disabled">Custom Time</button>
 						</div>
