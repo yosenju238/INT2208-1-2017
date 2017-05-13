@@ -1,15 +1,15 @@
-import Home from './Home';
+// import Home from './Home';
+const Home = require('./Home');
+
 
 describe("Using sound in home page", () => {
-  var Ran;
-
   //Ran is being in home page
   beforeEach(function() {
-    Ran = new Home();
+    Home.play();
   });
   it("Ran click on Rain button",  () => {
-    Ran.Rain();
-    expect(Ran.currentlyPlayingSong).toEqual("./audio/rain.mp3");
+    
+    expect(Home.play()).toHaveBeenCalled;
 
   });
 });

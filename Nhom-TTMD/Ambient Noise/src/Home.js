@@ -78,7 +78,6 @@ var Home = React.createClass( {
     render () {
         var Background = "./img/beautiful-rainy-weather-wallpapers-2.jpg";
         return(
-            
             <div Class = "Home">
         <div className="navbar navbar-default navbar-static-top">
             <div className="container">
@@ -217,7 +216,7 @@ var Home = React.createClass( {
             </div>
         </footer>
         
-</div>
+</div> 
         );
     },
 });

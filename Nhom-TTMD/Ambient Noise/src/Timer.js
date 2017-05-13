@@ -4,7 +4,7 @@ import DialogAudio from './DialogAudio';
 var TimeCountDown = React.createClass({
    render: function() {
      if (this.props.time == 0) {
-       return this.stopNoise
+       return <h1>Time out!</h1>
      }
      if (this.props.time == null || this.props.time == 0) return <div/>
      return <h1>Time left: {this.props.time}</h1>
