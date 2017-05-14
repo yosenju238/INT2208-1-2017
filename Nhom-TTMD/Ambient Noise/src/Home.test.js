@@ -1,14 +1,15 @@
 // import Home from './Home';
 import React from "react";
+import { shallow } from 'enzyme';
+jest.unmock('../Foo');
 const Home = require('./Home');
-
-
-describe("Using sound in home page", () => {
+    
   //Ran is being in home page
-  const rain = ".src"
-  it("Ran click on Rain button",  () => {
-    const rain = home().find("Rain");
-    expect(rain).toHaveBeenCalled;
+  const home = shallow(<Home />)
+      beforeEach(function () {
+        home.stopNoise();
+    });  
 
+  it("Ran click on Rain button",  () => {
+        expect(Home.Rain()).toBe(true);
   });
-});

@@ -18,12 +18,15 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap-toggle": "^2.2.2",
     "css-loader": "^0.28.0",
+    "enzyme": "^2.8.2",
     "file-loader": "^0.11.1",
     "jest": "^19.0.2",
     "jest-cli": "^19.0.2",
     "jquery": "^3.2.1",
     "material-ui": "^0.17.4",
     "node-sass": "^4.5.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scripts": "0.9.5",
@@ -40,5 +43,4 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
-
 }
