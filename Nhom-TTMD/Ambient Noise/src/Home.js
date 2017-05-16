@@ -157,6 +157,8 @@ var Home = React.createClass( {
                                 <source src={require("./audio/wind.mp3")} />
                             </audio>
                                 <a className="btn btn-block btn-lg btn-primary" onClick={this.Wind}>Wind</a>
+                            </div>
+                        </div>
                         <div className="row">
                             <div className="col-md-12">
                             <audio id="frog"  loop = "loop">
@@ -177,8 +179,6 @@ var Home = React.createClass( {
                             <div className="col-md-12">
                                 <a className="btn btn-block btn-default btn-lg" onClick={this.stopNoise}>Clear Noise</a>
                             </div>
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>
