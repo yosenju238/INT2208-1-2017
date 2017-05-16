@@ -6,4 +6,5 @@ When    : Ran see 4 button to change router
 And     : Ran see 8 button timer and 1 button dialog choose noise
 And     : Ran click on 1 minutes
 Then    : Time count down from 60 seconds
-And     : When time count down is over, a messenger "Time out!" appear 
+When    : Time count down is over, a messenger "Time out!" appear 
+And     : Audio is stoped

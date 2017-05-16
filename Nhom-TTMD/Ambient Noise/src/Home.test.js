@@ -1,9 +1,9 @@
 import React from "react";
-import { shallow,shallowRender } from 'enzyme';
+import { shallow } from 'enzyme';
 import Home from './Home';
 
     
-  describe('Ran is being in home page in beta version', () => {
+describe('Ran is being in home page in beta version', () => {
 
     var home = shallow(<Home/>)
     
@@ -56,4 +56,4 @@ import Home from './Home';
       expect(home.find('a').findWhere(n => n.matchesElement(<a>Ambient Noise</a>)).length).toBe(1);
     });
 
-  });
+});
