@@ -8,21 +8,20 @@ describe('Ran is being in home page in beta version', () => {
     var home = shallow(<Home/>)
     
     it("Ran see 4 button to change router",  () => {
-      expect(home.find('button').children().length).toBe(4);
+      expect(home.find('li').children().length).toBe(4);
     });
 
     it("7 button with 6 button audio and 1 button clear audio", () => {
-      // expect(home.find('btn btn-block btn-lg btn-primary').children().length).toBe(6);
       expect(home.find('a').findWhere(n => n.hasClass('btn btn-block btn-lg btn-primary')).length).toBe(6);
       expect(home.find('a').findWhere(n => n.hasClass('btn btn-block btn-default btn-lg')).length).toBe(1);
     });
 
-    // it("Ran click on Rain button",() => {
-    //     var spy = spyOn(Home.prototype,'Rain');
-    //     expect(home.find('a').findWhere(n => n.matchesElement(<a>Rain</a>)).length).toBe(1);
-    //     home.find('a').findWhere(n => n.matchesElement(<a>Rain</a>)).simulate('click');
-    //     expect(spy).toBeCalled();
-    // });
+    it("Ran click on Rain button",() => {
+        var spy = spyOn(Home.prototype,'Rain');
+        expect(home.find('a').findWhere(n => n.matchesElement(<a>Rain</a>)).length).toBe(1);
+        home.find('a').findWhere(n => n.matchesElement(<a>Rain</a>)).simulate('click');
+        expect(spy).toBeCalled();
+    });
 
     it("Each button have right source",() =>{
       var audio1 = <source src={require("./audio/rain.mp3")} />
