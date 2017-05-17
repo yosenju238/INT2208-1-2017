@@ -137,6 +137,8 @@ class Home extends React.Component {
                                 <button className="btn" type="button">
                                  {this.state.youtube ? <img src={require('./img/checked.png')}/> : null} Show Youtube Window
                                 </button>
+                                <button className="btn disabled" type="button">Live chat with everyone</button>
+                                <button className="btn disabled" type="button">News</button>
                               </li>
                             </ul>
                         </li>

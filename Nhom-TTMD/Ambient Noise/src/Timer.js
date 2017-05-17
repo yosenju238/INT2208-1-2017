@@ -1,6 +1,5 @@
 var React = require('react');
 import DialogAudio from './DialogAudio';
-import YouTube from 'react-youtube';
 
 var TimeCountDown = React.createClass({
    render: function() {
@@ -12,23 +11,23 @@ var TimeCountDown = React.createClass({
     }
 })
 
-class Timer extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false,
-      youtube: false,
-    }
-  }
+ var Timer = React.createClass( { 
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       open: false,
+//       youtube: false,
+//     }
+//   },
 
-  _handleDropdown() {
-    this.setState({
-      open: !this.state.open
-    })
-  }
+//   _handleDropdown() {
+//     this.setState({
+//       open: !this.state.open
+//     })
+//   },
   getInitialState() {
     return {time: null, int: null}
-  }
+  },
   startTimer(time) {
 
     clearInterval(this.state.int)
@@ -43,7 +42,7 @@ class Timer extends React.Component{
     }, 1000)
     console.log('1: After setInterval')
     return this.setState({time: time, int: int})
-  }
+  },
 
     render() {
       var youtubeContainer = {
@@ -81,7 +80,10 @@ class Timer extends React.Component{
                         <li>
                             <a href="group">Group</a>
                         </li>
-                        <li className={dropdownActions} onClick={this._handleDropdown.bind(this)}>
+                        <li className="disabled">
+                            <a href="#">More</a>
+                        </li>
+                        {/*<li className={dropdownActions} onClick={this._handleDropdown.bind(this)}>
                             <a className="dropdown-toggle" type="button" href="#">
                               More <span className="caret"/>
                             </a>
@@ -90,18 +92,20 @@ class Timer extends React.Component{
                                 <button className="btn" type="button">
                                  {this.state.youtube ? <img src={require('./img/checked.png')}/> : null} Show Youtube Window
                                 </button>
+                                <button className="btn disabled" type="button">Live chat with everyone</button>
+                                <button className="btn disabled" type="button">News</button>
                               </li>
                             </ul>
-                        </li>
+                        </li>*/}
                     </ul>
                 </div>
-                {this.state.youtube ?
+                {/*{this.state.youtube ?
                   <div style={youtubeContainer}>
                     <YouTube
                       videoId="7kKg_GCbvk4"
                       opts={opts}
                     />
-                  </div> : null}
+                  </div> : null}*/}
             </div>
         </div>
 
@@ -177,7 +181,7 @@ class Timer extends React.Component{
             </div>
         );
     }
-};
+});
 var Button = React.createClass({
   startTimer: function (e) {
     return this.props.startTimer(this.props.time)
