@@ -1,5 +1,6 @@
 var React = require('react');
 import DialogAudio from './DialogAudio';
+import YouTube from 'react-youtube';
 
 var TimeCountDown = React.createClass({
    render: function() {
@@ -11,17 +12,30 @@ var TimeCountDown = React.createClass({
     }
 })
 
-var Timer = React.createClass({
-  getInitialState: function () {
+class Timer extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      youtube: false,
+    }
+  }
+
+  _handleDropdown() {
+    this.setState({
+      open: !this.state.open
+    })
+  }
+  getInitialState() {
     return {time: null, int: null}
-  },
-  startTimer: function (time) {
-      
+  }
+  startTimer(time) {
+
     clearInterval(this.state.int)
     var _this= this
-    
+
     var int = setInterval(function() {
-       
+
       console.log('2: Inside of setInterval')
       var tl = _this.state.time - 1
       if (tl == 0) clearInterval(int)
@@ -29,10 +43,20 @@ var Timer = React.createClass({
     }, 1000)
     console.log('1: After setInterval')
     return this.setState({time: time, int: int})
-  },
+  }
 
     render() {
-
+      var youtubeContainer = {
+        position: "absolute"
+      };
+      var opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+          autoplay: 1
+        }
+      };
+      var dropdownActions = this.state.open ? "dropdown open" : "dropdown";
         return(
             <div>
         <div className="navbar navbar-default navbar-static-top">
@@ -57,14 +81,30 @@ var Timer = React.createClass({
                         <li>
                             <a href="group">Group</a>
                         </li>
-                        <li className="disabled">
-                            <a href="#">More</a>
+                        <li className={dropdownActions} onClick={this._handleDropdown.bind(this)}>
+                            <a className="dropdown-toggle" type="button" href="#">
+                              More <span className="caret"/>
+                            </a>
+                            <ul className="dropdown-menu">
+                              <li onClick={()=> this.setState({youtube: !this.state.youtube})}>
+                                <button className="btn" type="button">
+                                 {this.state.youtube ? <img src={require('./img/checked.png')}/> : null} Show Youtube Window
+                                </button>
+                              </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
+                {this.state.youtube ?
+                  <div style={youtubeContainer}>
+                    <YouTube
+                      videoId="7kKg_GCbvk4"
+                      opts={opts}
+                    />
+                  </div> : null}
             </div>
         </div>
-     
+
         <div className="section text-right">
             <div className="background-image" style={{backgroundImage: 'url(' + require('./img/pocket_watch_time_clock_bokeh_1920x1080.jpg') + ')'}}></div>
             <div className="container">
@@ -92,16 +132,16 @@ var Timer = React.createClass({
 										<Button time="1800" startTimer={this.startTimer}/>
 										<Button time="2700" startTimer={this.startTimer}/>
 										<Button time="3600" startTimer={this.startTimer}/>
-										
+
 										<button type="button" className="btn btn-primary disabled">Custom Time</button>
 						</div>
                     </div>
 				</div>
-				
+
 			</div>
-                    
-        </div>  
-		
+
+        </div>
+
 		<footer className="section section-primary">
             <div className="container">
                 <div className="row">
@@ -136,8 +176,8 @@ var Timer = React.createClass({
         </footer>
             </div>
         );
-    },
-});
+    }
+};
 var Button = React.createClass({
   startTimer: function (e) {
     return this.props.startTimer(this.props.time)
