@@ -2,7 +2,7 @@ Fearture: Testing UI, theme, count down and button in Group router
 
 Background:
 Given   : Ran is being in group page in beta version
-When    : Ran see 4 button to change router
+When    : Ran see 3 button to change router
 And     : Ran see 7 button timer include 6 button have group was set, 1 button use to create group and 1 button to clear all noise
 And     : Ran click on button sea
 Then    : Sea sound is activated

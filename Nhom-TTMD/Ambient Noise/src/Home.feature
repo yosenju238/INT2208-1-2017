@@ -2,7 +2,7 @@ Feature: Testing UI, theme,path and button click in homepage
 
 Background:
 Given   : Ran is being in home page in beta version
-When    : Ran see 4 button to change router
+When    : Ran see 3 button to change router
 And     : Ran see 6 button audio and 1 button clear audio
 And     : Ran click on Rain button
 Then    : Rain sound is activated

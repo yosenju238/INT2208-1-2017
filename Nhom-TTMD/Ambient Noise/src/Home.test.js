@@ -7,8 +7,10 @@ describe('Ran is being in home page in beta version', () => {
 
     var home = shallow(<Home/>)
     
-    it("Ran see 4 button to change router",  () => {
-      expect(home.find('li').children().length).toBe(4);
+    it("Ran see 3 button to change router",  () => {
+        expect(home.find('li').findWhere(n => n.matchesElement(<a>Home</a>)).length).toBe(1);
+        expect(home.find('li').findWhere(n => n.matchesElement(<a>Timer</a>)).length).toBe(1);
+        expect(home.find('li').findWhere(n => n.matchesElement(<a>Group</a>)).length).toBe(1);
     });
 
     it("7 button with 6 button audio and 1 button clear audio", () => {
